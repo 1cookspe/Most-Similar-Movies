@@ -1,6 +1,6 @@
 # Movie Recommendations using Semantic Search - Backend
 
-This repository contains the FastAPI backend for the `Movie Recommendations using Semantic Search` app.
+This repository contains the FastAPI backend for the `Most Similar Movies` app.
 In `main.py`, the backend contains an endpoint called `/api/recommendations` that takes in the search query as a string.
 This function converts the search query to its embedding using the [Cohere Embed API](https://docs.cohere.com/reference/embed).
 The 20 closest embeddings stored in a Pinecone database are returned; these are the embeddings for the summaries of the 1000 highest rated movies on IMDb.
@@ -10,7 +10,6 @@ Please feel free to check out the frontend code [here](https://github.com/1cooks
 
 
 ## Running the Backend Locally
-### Environment Setup
 1. Clone the repository:
 ```shell
 git clone https://github.com/1cookspe/Movie-Recommendations-Backend.git
@@ -33,11 +32,9 @@ Please ensure that you include the following keys:
 - `PINECONE_INDEX_NAME`: The name of the index where you have stored the embeddings of the dataset.
 - `NUM_DIMENSIONS`: The number of values in the vector embedding; I use `1024` in my application.
 
-### Running the Server
-Now that your environment has been set up, you can run the server like so:
+5. Now that your environment has been set up, you can run the server like so:
 
 ```shell
 uvicorn main:app --reload
 ```
-
-Now, your server should be running on `http://localhost:8000.
+Now, your server should be running on [http://localhost:8000](http://localhost:8000).

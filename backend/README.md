@@ -1,4 +1,4 @@
-# Movie Recommendations using Semantic Search - Backend
+# Backend
 
 This repository contains the FastAPI backend for the `Most Similar Movies` app.
 In `main.py`, the backend contains an endpoint called `/api/recommendations` that takes in the search query as a string.

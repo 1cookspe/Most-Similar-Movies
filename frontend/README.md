@@ -13,7 +13,7 @@ The most important files are the following:
 cd frontend
 ```
 
-2. Install required packages.
+2. Install the required packages.
 ```shell
 pnpm install
 ```

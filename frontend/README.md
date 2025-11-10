@@ -13,12 +13,17 @@ The most important files are the following:
 cd frontend
 ```
 
-2. Install required packages.
+2. Create a `.env` file with environment variables.
+The only required variable is the following:
+- `BACKEND_URL`: The URL that the backend server is currently running on.
+If you are running the app locally, this should be [http://localhost:8000](http://localhost:8000).
+
+3. Install required packages.
 ```shell
 pnpm install
 ```
 
-3. Run in development mode; the app will be live at [http://localhost:3000](http://localhost:3000).
+4. Run in development mode; the app will be live at [http://localhost:3000](http://localhost:3000).
 ```bash
 pnpm run dev
 ```

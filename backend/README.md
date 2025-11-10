@@ -10,19 +10,24 @@ Please feel free to check out the frontend code [here](https://github.com/1cooks
 
 
 ## Running the Backend Locally
-1. Create a virtual environment from the `environment.yml` file. I used [MiniConda](https://www.anaconda.com/docs/getting-started/miniconda/main) with Python 3.11, like so:
+1. `cd` into the `backend` folder on your computer.
+```shell
+cd backend
+```
+
+2. Create a virtual environment from the `environment.yml` file. I used [MiniConda](https://www.anaconda.com/docs/getting-started/miniconda/main) with Python 3.11, like so:
 ```shell
 conda env create -f environment.yml
 ```
 
-2. Create an `.env` file where you can store information specific to your environment, including the Cohere and Pinecone API keys.
+3. Create an `.env` file where you can store information specific to your environment, including the Cohere and Pinecone API keys.
 Please ensure that you include the following keys:
 - `FRONTEND_URL`: The URL of the Next.js frontend running on your computer.
 - `COHERE_API_KEY`: The API key associated with your Cohere account.
 - `PINECONE_API_KEY`: The API key associated with your Pinecone account.
 - `PINECONE_INDEX_NAME`: The name of the index where you have stored the embeddings of the dataset.
 
-3. Now that your environment has been set up, you can run the server like so:
+4. Now that your environment has been set up, you can run the server like so:
 
 ```shell
 uvicorn main:app --reload

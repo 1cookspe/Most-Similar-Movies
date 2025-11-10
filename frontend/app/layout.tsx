@@ -28,6 +28,20 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
+
+        {/* Footer */}
+          <footer className="bg-gray-100 text-center py-4 border-t">
+            <p className="text-sm text-gray-600">
+              View the project on{' '}
+              <a
+                href="https://github.com/1cookspe/Most-Similar-Movies"
+                target="_blank"
+                className="text-blue-600 hover:underline"
+              >
+                GitHub
+              </a>
+            </p>
+          </footer>
       </body>
     </html>
   );

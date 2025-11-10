@@ -3,6 +3,10 @@
 This is a semantic search-powered movie recommendation app using Cohere and Pinecone.
 Users can describe the kind of movie they want to watch — by mood, genre, theme, or style — and receive intelligent suggestions based on the most similar movies to their search query.
 
+The embeddings of the descriptions for the 1000 movies on IMDb were extracted using the [Cohere Embed API](https://docs.cohere.com/reference/embed) and stored in a [Pinecone](https://docs.pinecone.io/integrations/cohere) database.
+Given a new query that the user enters into this web app, the new search is converted to its embeddings and the 20 most similar movie descriptions are returned from a Pinecone database.
+The [Cohere Rerank API](https://docs.cohere.com/reference/rerank) then re-ranks the top results and the 5 most relevant movies are displayed to the user in the web app.
+
 ### Examples
 #### Search for "superheroes who save the city"
 ![Example search 1](./README_files/superheroes.gif)
@@ -12,10 +16,6 @@ Users can describe the kind of movie they want to watch — by mood, genre, them
 
 #### Search for "royal family"
 ![Example search 3](./README_files/royal_family.gif)
-
-The embeddings of the descriptions for the 1000 movies on IMDb were extracted using the [Cohere Embed API](https://docs.cohere.com/reference/embed) and stored in a [Pinecone](https://docs.pinecone.io/integrations/cohere) database.
-Given a new query that the user enters into this web app, the new search is converted to its embeddings and the 20 most similar movie descriptions are returned from a Pinecone database.
-The [Cohere Rerank API](https://docs.cohere.com/reference/rerank) then re-ranks the top results and the 5 most relevant movies are displayed to the user in the web app.
 
 ## How it Works
 ### Embedding Preprocessing

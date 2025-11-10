@@ -49,7 +49,7 @@ async def get_recommendations(request: RecommendationRequest):
         texts=[query],
         model="embed-v4.0",
         input_type="search_query",
-        output_dimension=int(os.getenv("NUM_DIMENSIONS", 1024)),
+        output_dimension=1024,
         embedding_types=["float"],
     ).embeddings.float
 

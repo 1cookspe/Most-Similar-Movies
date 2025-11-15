@@ -35,7 +35,8 @@ export default function Search({ placeholder }: { placeholder: string }) {
 	const suggestions = [
 		"superheroes who save the city",
 		"underdog story winning big",
-		"royal family"
+		"royal family",
+		"falsely accused of crime"
 	];
 
 	// Return the search form
